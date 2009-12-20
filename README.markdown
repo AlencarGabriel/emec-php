@@ -84,7 +84,7 @@ __Parâmetros:__
 
 __Descrição e Uso:__  
 Passando o curso desejado e a página, este script se conectará no site do
-emec e pegará uma página(html) contendo os links das instituições.
+emec e pegará uma página html contendo os links das instituições.
 São 15 links por página.
 
 Como é preciso informar qual página deve ser pegada, este script é melhor
@@ -110,7 +110,7 @@ __pega_url__.
 __Parâmetros:__  
 Não possui parâmetros. Recebe o conteúdo direto da entrada padrão STDIN.
 
-__Descrição e Uso:__ 
+__Descrição e Uso:__  
 Extrai de uma página que já foi antes recuperada retornando todos os links
 para as informações de uma instituição.
 
@@ -120,20 +120,36 @@ para as informações de uma instituição.
     # o head retorna o número de linhas desejados de cima para baixo (é o head)
     # no caso foi pedido apenas 1 linha: "head -1"
     
-    # ./pega_pagina matematica 1 | ./pega_urls | head -1
+    pega_pagina matematica 1 | pega_urls | head -1
 
-### pega_instituicao
+### pega_instituicao URL
+__Parâmetros:__  
+1.   URL: url para a página da instituição
 
-Recebe o link para a página de detalhes de uma instituição e retorna seu conteudo.
+__Descrição e Uso:__  
+Recebe o link para a página de detalhes de uma instituição e retorna seu conteúdo
+html.
 
-Usado em conjunto com o script *extrai_instituicao*.
+Como o resultado deste script é apenas o html da página, isso não é muito útil,
+portanto, este script normalmente é usado em conjunto com o 
+script __extrai_instituicao__.
 
 
 ### extrai_instituicao
+__Parâmetros:__  
+Este script não recebe parâmetros. Apenas recebe o conteúdo direto da entrada
+padrão STDIN.
 
+__Descrição e Uso:__  
 Extrai de uma página de uma instituição todas as informações úteis e retorna em
 uma linha única com os campos separados por <TAB>.
 
+    # Ex 1:
+    # pega a primeira instituição do curso de matemática e salva em um arquivo
+    # note que foi quebrado a linha em duas com a barra "\"
+    
+    pega_instituicao.php `./pega_pagina.php MATEMATICA 1 \
+    | pega_urls.php | head -1` | extrai_instituicao.php
 
 
-  ./pega_instituicao `./pega_pagina FERMAGEM 1 | ./pega_urls | head -1` | ./extrai_instituicao
+
