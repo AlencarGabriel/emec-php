@@ -37,13 +37,17 @@ __Simplifica o desenvolvimento__: Escrever um código que executa apenas uma tar
 é muito mais simples. É menos problemas para se pensar. Basta saber o
 que vai entrar e em como reproduzir a saída esperada.
 
-__Possibilita trabalhar de forma paralelizada__: Escrevendo um script único
+__Possibilita trabalhar de forma paralelizada__:Escrevendo um script único
 impossibilita usar o máximo da capacidade de processamento de um computador moderno
 com múltiplos núcleos. Sim, é possível usar este potêncial em outras linguagens, 
 mas no PHP não é possível. Então, criei as tarefas separadamente e assim posso
-chamar a quantidade de cada um no momento que eu quiser.
+chamar a quantidade de cada um no momento que eu quiser. Quando pedimos uma página,
+esta retorna vários links. Ao invés de processar cada um após o outro, podemos
+processar até todos de uma vez.
 
 ### Pseudo-código ###
+
+Uso simplificado dos scripts:
 
     cursos = ["engenharia", "matemática"]
     FOREACH cursos AS curso
@@ -56,11 +60,19 @@ chamar a quantidade de cada um no momento que eu quiser.
                 dados = extrai_instituicao(instituicao)
                 escreve(dados)
 
-pega_pagina (curso) (pagina)
 
+### pega_pagina CURSO PAGINA ### 
+
+__Parâmetros:__  
+*  CURSO: nome do curso desejado
+*  PAGINA: número da página que deve ser pega
+
+__Descrição e Uso:__  
 Passando o curso desejado e a página, este script se conectará no site do
-emec e pegará uma página contendo um link para cada instituição da página.
-São 15 links por página.
+emec e pegará uma página contendo os links das instituições. São 15 links por página.
+
+Como é preciso informar qual página deve ser pegada, este script é melhor chamado
+dentro de um laço.
 
 Usado em conjunto com o script *pega_url*.
 
