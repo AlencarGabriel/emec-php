@@ -12,6 +12,6 @@ if(DEBUG)
 }
 
 // verifica os parâmetros
-if ( $argc != 2 || in_array($argv[1], array('--help', '-help', '-h', '-?'))) {
+if ( $argc < 2 || in_array($argv[1], array('--help', '-help', '-h', '-?'))) {
     help();
 }
