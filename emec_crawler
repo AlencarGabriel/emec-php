@@ -11,10 +11,23 @@ if(DEBUG)
     error_reporting(0);
 }
 
-// verifica os parâmetros
-if ( $argc < 2 || in_array($argv[1], array('--help', '-help', '-h', '-?'))) {
-    help();
+main($argc, $argv);
+
+function main($argc, $argv)
+{
+    if ( $argc < 2 || in_array($argv[1], array('--help', '-help', '-h', '-?'))) {
+        help();
+        exit();
+    }
+    
+    unset($argv[0]);
+    
+    foreach($argv as $curso)
+    {
+        
+    }
 }
+
 
 function help()
 {
