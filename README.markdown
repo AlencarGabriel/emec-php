@@ -61,7 +61,8 @@ Uso simplificado dos scripts:
                 escreve(dados)
 
 ### pega_num_pagina CURSO  
-__Parâmetros:__  
+__Parâmetros:__
+
 1.   CURSO: nome do curso desejado
 
 __Descrição e Uso:__  
@@ -78,7 +79,8 @@ Este comando é útil para ser usado em um laço com o programa __pega_pagina__.
 
 ### pega_pagina CURSO PAGINA  
 
-__Parâmetros:__  
+__Parâmetros:__
+
 1.   CURSO: nome do curso desejado
 2.   PAGINA: número da página que deve ser pega
 
@@ -107,7 +109,8 @@ __pega_url__.
 
 
 ### pega_urls
-__Parâmetros:__  
+__Parâmetros:__
+
 Não possui parâmetros. Recebe o conteúdo direto da entrada padrão STDIN.
 
 __Descrição e Uso:__  
@@ -123,7 +126,8 @@ para as informações de uma instituição.
     pega_pagina matematica 1 | pega_urls | head -1
 
 ### pega_instituicao URL
-__Parâmetros:__  
+__Parâmetros:__
+
 1.   URL: url para a página da instituição
 
 __Descrição e Uso:__  
@@ -136,13 +140,16 @@ script __extrai_instituicao__.
 
 
 ### extrai_instituicao
-__Parâmetros:__  
+__Parâmetros:__
+
 Este script não recebe parâmetros. Apenas recebe o conteúdo direto da entrada
 padrão STDIN.
 
 __Descrição e Uso:__  
 Extrai de uma página de uma instituição todas as informações úteis e retorna em
-uma linha única com os campos separados por <TAB>.
+uma linha única com os campos separados por TAB.
+
+Com o uso dos scripts anteriores é possível escrever em um arquivo único tabulado.
 
     # Ex 1:
     # pega a primeira instituição do curso de matemática e salva em um arquivo
