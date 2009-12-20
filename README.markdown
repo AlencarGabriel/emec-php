@@ -1,7 +1,7 @@
 # Emec Crawler #
 
 Uma série de pequenos scripts em PHP para conectar no site do 
-[e-mec]{http://emec.mec.gov.br/ "site do e-mec"} e capturar
+[e-mec](http://emec.mec.gov.br/ "site do e-mec") e capturar
 todas as instituições que oferecem o curso pesquisado.
 
 ## Introdução ##
@@ -9,15 +9,35 @@ todas as instituições que oferecem o curso pesquisado.
 Para entender como estes scripts funcionam é importante saber como o site emec
 funciona.
 
-Ao entrar no site, você encontrará um formulário para efetuar sua pesquisa.
-O que gostariamos de pegar é todas as instituições no Brasil que oferece um 
+Ao entrar no [site do e-mec](http://emec.mec.gov.br/ "site do e-mec"), 
+você encontrará um formulário para efetuar sua pesquisa.
+O que gostaríamos de pegar é todas as instituições no Brasil que oferece um 
 determinado curso. Por exemplo: enfermagem.
 
-No formulário, na opção "Buscar por", escolhemos "curso". Preenchemos o campo
+No formulário, na opção "Buscar por", escolhemos "curso", preenchemos o campo
 "Curso" com a palavra "enfermagem" e mantemos todas as opções em branco para 
 efetuar uma busca completa.
 
+Ao pressionar o botão "consultar", o site carrega a lista de instituições
+que queríamos. Como são muitas instituições, o resultado é mostrado dividido 
+em páginas.
+
+Cada entrada de uma página contém o nome da instituição e o mais importante: Um
+link para a página contendo os detalhes da instituição como o endereço por exemplo.
+E estes são os dados que podem ser capturados usando os scripts que aqui estão.
+
+
 ## Scripts ##
+
+Todo o trabalho é dividido em diferentes scripts. Cada um exerce uma tarefa 
+distinta. Poderia ser um único script que fizesse todo o trabalho, porém, 
+existem motivos para quebrá-lo em arquivos menores:
+
+_Simplifica o desenvolvimento_
+
+_Possibilita trabalhar de forma paralelizada_
+
+
 
 pega_pagina (curso) (pagina)
 
