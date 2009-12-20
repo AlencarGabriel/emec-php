@@ -11,7 +11,7 @@ if(DEBUG)
     error_reporting(0);
 }
 
-function curl($url, $parametros)
+function curl($url, $parametros = array())
 {
     $par_serial = '';
     foreach($parametros as $chave => $valor)
