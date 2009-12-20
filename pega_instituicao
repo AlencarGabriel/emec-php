@@ -3,18 +3,13 @@
 
 require_once('./utils.php');
 
-main($argc, $argv);
-
-function main($argc, $argv)
-{
-    if ( $argc < 2 || in_array($argv[1], array('--help', '-help', '-h', '-?'))) {
-        help();
-        exit();
-    }
-    
-    $pagina = curl($argv[1]);
-    fwrite(STDOUT, $pagina . PHP_EOL);
+if ( $argc < 2 || in_array($argv[1], array('--help', '-help', '-h', '-?'))) {
+    help();
+    exit();
 }
+
+$pagina = curl($argv[1]);
+fwrite(STDOUT, $pagina . PHP_EOL);
 
 function help()
 {
