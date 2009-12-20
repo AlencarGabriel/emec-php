@@ -60,21 +60,46 @@ Uso simplificado dos scripts:
                 dados = extrai_instituicao(instituicao)
                 escreve(dados)
 
+### pega_num_pagina CURSO  
+__Parâmetros:__  
+1.   CURSO: nome do curso desejado
+
+__Descrição e Uso:__  
+Pega a quantidade de páginas contendo urls para um determinado curso.
+
+Este comando é útil para ser usado em um laço com o programa __pega_pagina__.
+
+    # pega a ultima pagina de um curso
+    # note o uso de "`" para pegar primeiro o resultado do comando
+    # para ser passado para o script anterior
+    pega_pagina matematica `pega_num_pagina matematica`
 
 ### pega_pagina CURSO PAGINA  
 
 __Parâmetros:__  
-  *  CURSO: nome do curso desejado
-  *  PAGINA: número da página que deve ser pega
+1.   CURSO: nome do curso desejado
+2.   PAGINA: número da página que deve ser pega
 
 __Descrição e Uso:__  
 Passando o curso desejado e a página, este script se conectará no site do
-emec e pegará uma página contendo os links das instituições. São 15 links por página.
+emec e pegará uma página(html) contendo os links das instituições.
+São 15 links por página.
 
-Como é preciso informar qual página deve ser pegada, este script é melhor chamado
-dentro de um laço.
+Como é preciso informar qual página deve ser pegada, este script é melhor
+chamado dentro de um laço.
 
-Usado em conjunto com o script *pega_url*.
+    # Ex 1:
+    # pega a primeira página do curso de enfermagem
+    pega_pagina enfermagem 1
+    
+    # Ex 2:
+    # pega a primeira página do curso de matemática e salva em um arquivo
+    # note o redirecionamento da saida para o arquivo com o ">"
+    pega_pagina matematica 1 > matematica_pg1.html
+    
+
+Normalmente a saída deste programa é redirecionada para a entrada do script
+__pega_url__.
 
 
 ### pega_urls
