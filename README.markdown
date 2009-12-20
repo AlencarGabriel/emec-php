@@ -4,6 +4,19 @@ Uma série de pequenos scripts em PHP para conectar no site do
 [e-mec]{http://emec.mec.gov.br/ "site do e-mec"} e capturar
 todas as instituições que oferecem o curso pesquisado.
 
+## Introdução ##
+
+Para entender como estes scripts funcionam é importante saber como o site emec
+funciona.
+
+Ao entrar no site, você encontrará um formulário para efetuar sua pesquisa.
+O que gostariamos de pegar é todas as instituições no Brasil que oferece um 
+determinado curso. Por exemplo: enfermagem.
+
+No formulário, na opção "Buscar por", escolhemos "curso". Preenchemos o campo
+"Curso" com a palavra "enfermagem" e mantemos todas as opções em branco para 
+efetuar uma busca completa.
+
 ## Scripts ##
 
 pega_pagina (curso) (pagina)
