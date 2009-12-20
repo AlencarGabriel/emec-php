@@ -27,7 +27,7 @@ function main($argc, $argv)
         )
     );
     
-    fwrite(STDOUT, $pagina);
+    fwrite(STDOUT, $pagina . PHP_EOL);
 }
 
 
