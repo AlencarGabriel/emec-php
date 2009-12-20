@@ -33,11 +33,29 @@ Todo o trabalho é dividido em diferentes scripts. Cada um exerce uma tarefa
 distinta. Poderia ser um único script que fizesse todo o trabalho, porém, 
 existem motivos para quebrá-lo em arquivos menores:
 
-_Simplifica o desenvolvimento_
+__Simplifica o desenvolvimento__: Escrever um código que executa apenas uma tarefa
+é muito mais simples. É menos problemas para se pensar. Basta saber o
+que vai entrar e em como reproduzir a saída esperada.
 
-_Possibilita trabalhar de forma paralelizada_
+_Possibilita trabalhar de forma paralelizada_: Escrevendo um script único
+impossibilita usar o máximo da capacidade de processamento de um computador moderno
+com múltiplos núcleos. Sim, é possível usar este potêncial em outras linguagens, 
+mas no PHP não é possível. Então, criei as tarefas separadamente e assim posso
+chamar a quantidade de cada um no momento que eu quiser.
 
-
+> ## Pseudo-código ##
+> 
+> cursos = ["engenharia", "matemática"]
+> FOREACH cursos AS curso
+>     total_paginas = pega_num_paginas(curso)
+>     FOR pagina FROM 1 TO total_paginas
+>         conteudo = pega_pagina(curso, pagina)
+>         urls = pega_urls(conteudo)
+>         FOREACH urls as url
+>             instituicao = pega_instituicao(url)
+>             dados = extrai_instituicao(instituicao)
+>
+>
 
 pega_pagina (curso) (pagina)
 
