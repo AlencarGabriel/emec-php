@@ -69,9 +69,11 @@ Pega a quantidade de páginas contendo urls para um determinado curso.
 
 Este comando é útil para ser usado em um laço com o programa __pega_pagina__.
 
+    # Ex 1:
     # pega a ultima pagina de um curso
     # note o uso de "`" para pegar primeiro o resultado do comando
     # para ser passado para o script anterior
+    
     pega_pagina matematica `pega_num_pagina matematica`
 
 ### pega_pagina CURSO PAGINA  
@@ -90,11 +92,13 @@ chamado dentro de um laço.
 
     # Ex 1:
     # pega a primeira página do curso de enfermagem
+    
     pega_pagina enfermagem 1
     
     # Ex 2:
     # pega a primeira página do curso de matemática e salva em um arquivo
     # note o redirecionamento da saida para o arquivo com o ">"
+    
     pega_pagina matematica 1 > matematica_pg1.html
     
 
@@ -103,10 +107,20 @@ __pega_url__.
 
 
 ### pega_urls
+__Parâmetros:__  
+Não possui parâmetros. Recebe o conteúdo direto da entrada padrão STDIN.
 
-Extrai de uma página que já foi antes recuperada e retorna todos os links
+__Descrição e Uso:__ 
+Extrai de uma página que já foi antes recuperada retornando todos os links
 para as informações de uma instituição.
 
+    # Ex 1:
+    # pega o primeiro link da primeira página do curso de matematica
+    # note o uso de pipes "|" e do comando unix "head"
+    # o head retorna o número de linhas desejados de cima para baixo (é o head)
+    # no caso foi pedido apenas 1 linha: "head -1"
+    
+    # ./pega_pagina matematica 1 | ./pega_urls | head -1
 
 ### pega_instituicao
 
