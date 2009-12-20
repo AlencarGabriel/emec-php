@@ -10,3 +10,8 @@ if(DEBUG)
 } else {
     error_reporting(0);
 }
+
+// verifica os parâmetros
+if ( $argc != 2 || in_array($argv[1], array('--help', '-help', '-h', '-?'))) {
+    help();
+}
