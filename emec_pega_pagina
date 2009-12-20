@@ -3,16 +3,6 @@
 
 require_once('./utils.php');
 
-define('DEBUG', true);
-
-if(DEBUG)
-{
-    error_reporting(-1);
-
-} else {
-    error_reporting(0);
-}
-
 main($argc, $argv);
 
 function main($argc, $argv)

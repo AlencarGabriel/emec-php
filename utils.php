@@ -1,6 +1,15 @@
 <?php
 
+define('DEBUG', true);
 define('USERAGENT', 'Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.1.5) Gecko/20091109 Ubuntu/9.10 (karmic) Firefox/3.5.5');
+
+if(DEBUG)
+{
+    error_reporting(-1);
+
+} else {
+    error_reporting(0);
+}
 
 function curl($url, $parametros)
 {
