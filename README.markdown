@@ -44,7 +44,7 @@ mas no PHP não é possível. Então, criei as tarefas separadamente e assim pos
 chamar a quantidade de cada um no momento que eu quiser.
 
 > ### Pseudo-código ###
-> 
+>
 >    cursos = ["engenharia", "matemática"]
 >    FOREACH cursos AS curso
 >        total_paginas = pega_num_paginas(curso)
