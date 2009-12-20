@@ -45,15 +45,15 @@ chamar a quantidade de cada um no momento que eu quiser.
 
 > ### Pseudo-código ###
 > 
->  cursos = ["engenharia", "matemática"]
->  FOREACH cursos AS curso
->      total_paginas = pega_num_paginas(curso)
->      FOR pagina FROM 1 TO total_paginas
->          conteudo = pega_pagina(curso, pagina)
->          urls = pega_urls(conteudo)
->          FOREACH urls as url
->              instituicao = pega_instituicao(url)
->              dados = extrai_instituicao(instituicao)
+>    cursos = ["engenharia", "matemática"]
+>    FOREACH cursos AS curso
+>        total_paginas = pega_num_paginas(curso)
+>        FOR pagina FROM 1 TO total_paginas
+>            conteudo = pega_pagina(curso, pagina)
+>            urls = pega_urls(conteudo)
+>            FOREACH urls as url
+>                instituicao = pega_instituicao(url)
+>                dados = extrai_instituicao(instituicao)
 
 pega_pagina (curso) (pagina)
 
