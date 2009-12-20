@@ -61,11 +61,11 @@ Uso simplificado dos scripts:
                 escreve(dados)
 
 
-### pega_pagina CURSO PAGINA ### 
+### pega_pagina CURSO PAGINA  
 
 __Parâmetros:__  
-*  CURSO: nome do curso desejado
-*  PAGINA: número da página que deve ser pega
+  *  CURSO: nome do curso desejado
+  *  PAGINA: número da página que deve ser pega
 
 __Descrição e Uso:__  
 Passando o curso desejado e a página, este script se conectará no site do
@@ -77,20 +77,20 @@ dentro de um laço.
 Usado em conjunto com o script *pega_url*.
 
 
-pega_urls
+### pega_urls
 
 Extrai de uma página que já foi antes recuperada e retorna todos os links
 para as informações de uma instituição.
 
 
-pega_instituicao
+### pega_instituicao
 
 Recebe o link para a página de detalhes de uma instituição e retorna seu conteudo.
 
 Usado em conjunto com o script *extrai_instituicao*.
 
 
-extrai_instituicao
+### extrai_instituicao
 
 Extrai de uma página de uma instituição todas as informações úteis e retorna em
 uma linha única com os campos separados por <TAB>.
