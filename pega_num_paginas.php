@@ -3,7 +3,6 @@
 
 require_once(dirname(__FILE__).'/utils.php');
 
-
 if ( $argc < 2 || in_array($argv[1], array('--help', '-help', '-h', '-?'))) {
     help();
     exit();
