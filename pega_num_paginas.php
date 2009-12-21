@@ -26,7 +26,7 @@ $pagina = curl(
 $er = "/readonly value=\" de (.*?)\" size=7 maxlength=4/";
 preg_match_all($er, $pagina, $matches);
 $total_paginas = $matches[1][0];
-fwrite(STDOUT, $total_paginas . PHP_EOL);
+fwrite(STDOUT, $total_paginas);
 
 function help()
 {
