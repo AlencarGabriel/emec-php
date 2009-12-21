@@ -7,43 +7,28 @@ pegar as urls de cada pagina
 
 */
 
+require_once(dirname(__FILE__).'/exemplo_utils.php');
 
-inicializa_diretorio_temporario();
+inicializa_diretorio('tmp');
+
 
 $cursos = array('MATEMATICA', 'ENFERMAGEM', 'PSICOLOGIA');
-
 
 foreach($cursos as $curso)
 {
     echo "chamando um processo para {$curso}\n";
-    
+    exec("./exemplo_curso.php $curso > /dev/null &");
 }
 
-
-
-
-
-
-
-
-
-function inicializa_diretorio_temporario()
+sleep(2);
+    
+while(1)
 {
-    $nome_dir = dirname(__FILE__) . '/tmp';
-    
-    
-    
-    if(is_dir($nome_dir))
+    if( ! file_exists("./tmp/MATEMATICA_proc"))
     {
-        echo "diretório temporario existe. Limpando...\n";
-        $dir = dir($nome_dir);
-        while (false !== ($arquivo = $dir->read())) {
-            if($arquivo != '..' && $arquivo != '.')
-                unlink($nome_dir.'/'.$arquivo);
-        }
-        $dir->close();
-    } else {
-        echo "diretório temporario não existe. Criando...\n";
-        mkdir($nome_dir);
+        inicializa_diretorio("tmp/$curso/pgs_rodando");
+        //exec("./exemplo_conteudo.php $curso > /dev/null &");
+        break;
     }
 }
+
