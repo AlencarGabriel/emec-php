@@ -60,7 +60,7 @@ Uso simplificado dos scripts:
                 dados = extrai_instituicao(instituicao)
                 escreve(dados)
 
-### pega_num_pagina CURSO  
+### pega_num_paginas.php CURSO  
 __Parâmetros:__
 
 1.   CURSO: nome do curso desejado
@@ -68,16 +68,16 @@ __Parâmetros:__
 __Descrição e Uso:__  
 Pega a quantidade de páginas contendo urls para um determinado curso.
 
-Este comando é útil para ser usado em um laço com o programa __pega_pagina__.
+Este comando é útil para ser usado em um laço com o programa __pega_pagina.php__.
 
     # Ex 1:
     # pega a ultima pagina de um curso
     # note o uso de "`" para pegar primeiro o resultado do comando
     # para ser passado para o script anterior
     
-    pega_pagina matematica `pega_num_pagina matematica`
+    pega_pagina.php matematica `pega_num_paginas.php matematica`
 
-### pega_pagina CURSO PAGINA  
+### pega_pagina.php CURSO PAGINA  
 
 __Parâmetros:__
 
@@ -95,22 +95,21 @@ chamado dentro de um laço.
     # Ex 1:
     # pega a primeira página do curso de enfermagem
     
-    pega_pagina enfermagem 1
+    pega_pagina.php enfermagem 1
     
     # Ex 2:
     # pega a primeira página do curso de matemática e salva em um arquivo
     # note o redirecionamento da saida para o arquivo com o ">"
     
-    pega_pagina matematica 1 > matematica_pg1.html
+    pega_pagina.php matematica 1 > matematica_pg1.html
     
 
 Normalmente a saída deste programa é redirecionada para a entrada do script
 __pega_url__.
 
 
-### pega_urls
-__Parâmetros:__
-
+### pega_urls.php
+__Parâmetros:__  
 Não possui parâmetros. Recebe o conteúdo direto da entrada padrão STDIN.
 
 __Descrição e Uso:__  
@@ -123,9 +122,9 @@ para as informações de uma instituição.
     # o head retorna o número de linhas desejados de cima para baixo (é o head)
     # no caso foi pedido apenas 1 linha: "head -1"
     
-    pega_pagina matematica 1 | pega_urls | head -1
+    pega_pagina.php matematica 1 | pega_urls.php | head -1
 
-### pega_instituicao URL
+### pega_instituicao.php URL
 __Parâmetros:__
 
 1.   URL: url para a página da instituição
@@ -136,12 +135,11 @@ html.
 
 Como o resultado deste script é apenas o html da página, isso não é muito útil,
 portanto, este script normalmente é usado em conjunto com o 
-script __extrai_instituicao__.
+script __extrai_instituicao.php__.
 
 
-### extrai_instituicao
-__Parâmetros:__
-
+### extrai_instituicao.php
+__Parâmetros:__  
 Este script não recebe parâmetros. Apenas recebe o conteúdo direto da entrada
 padrão STDIN.
 
