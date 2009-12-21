@@ -1,7 +1,12 @@
 #!/usr/bin/env php
 <?php
 
-require_once('./utils.php');
+require_once(dirname(__FILE__).'/utils.php');
+
+if ( $argc > 1 && in_array($argv[1], array('--help', '-help', '-h', '-?'))) {
+    help();
+    exit();
+}
 
 $conteudo = file_get_contents('php://stdin');
 
@@ -65,4 +70,25 @@ $conteudo = trim($conteudo, '|');
 fwrite(STDOUT, $conteudo . PHP_EOL);
 
 
+function help()
+{
+$help = <<<EOT
+extrai_instituicao.php
 
+DESCRIÇÃO:
+  Extrai de uma página de uma instituição todas as informações úteis e retorna
+  em uma única linha com os campos separados por TAB.
+
+  Com o uso dos scripts anteriores é possível escrever em um arquivo único tabulado.
+
+  Este script não recebe parâmetros. Apenas recebe o conteúdo direto da
+  entrada padrão STDIN.
+
+EXEMPLO:
+  pega_instituicao.php `./pega_pagina.php matematica 1 
+  | pega_urls.php | head -1` | extrai_instituicao.php
+
+EOT;
+
+    echo $help;
+}

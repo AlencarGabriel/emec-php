@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 
-require_once('./utils.php');
+require_once(dirname(__FILE__).'/utils.php');
 
 
 if ( $argc < 2 || in_array($argv[1], array('--help', '-help', '-h', '-?'))) {
@@ -29,3 +29,22 @@ preg_match_all($er, $pagina, $matches);
 $total_paginas = $matches[1][0];
 fwrite(STDOUT, $total_paginas . PHP_EOL);
 
+function help()
+{
+$help = <<<EOT
+pega_num_paginas.php CURSO
+
+PARÃMETROS:
+  CURSO: nome do curso desejado
+
+DESCRIÇÃO:
+  Pega a quantidade de páginas contendo urls para um determinado curso.
+  Este comando é útil para ser usado em um laço com o programa pega_pagina.php
+
+EXEMPLO:
+  pega_pagina.php matematica `pega_num_paginas.php matematica`
+
+EOT;
+
+    echo $help;
+}

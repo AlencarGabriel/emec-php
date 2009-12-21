@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 
-require_once('./utils.php');
+require_once(dirname(__FILE__).'/utils.php');
 
 if ( $argc < 3 || in_array($argv[1], array('--help', '-help', '-h', '-?'))) {
     help();
@@ -30,8 +30,22 @@ fwrite(STDOUT, $pagina . PHP_EOL);
 function help()
 {
 $help = <<<EOT
-Uso: emec_pega_pagina (CURSO PAGINA)
-Exemplo: emec_crawler enfermagem 1
+pega_pagina.php CURSO PAGINA
+
+PARÃMETROS:
+  CURSO: nome do curso desejado
+  PAGINA: número da página que deve ser pega
+
+DESCRIÇÃO:
+  Passando o curso desejado e a página, este script se conectará
+  no site do emec e pegará uma página html contendo os links das instituições.
+  São 15 links por página.
+
+  Como é preciso informar qual página deve ser pegada, este script é melhor
+  chamado dentro de um laço.
+
+EXEMPLO:
+  pega_pagina.php matematica 1
 
 EOT;
 

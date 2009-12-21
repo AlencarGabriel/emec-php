@@ -156,7 +156,7 @@ padrão STDIN.
 
 __Descrição e Uso:__  
 Extrai de uma página de uma instituição todas as informações úteis e retorna em
-uma linha única com os campos separados por TAB.
+uma única linha com os campos separados por TAB.
 
 Com o uso dos scripts anteriores é possível escrever em um arquivo único tabulado.
 
