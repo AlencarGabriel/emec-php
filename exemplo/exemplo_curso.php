@@ -1,19 +1,19 @@
 #!/usr/bin/env php
 <?php
 
+require_once(dirname(__FILE__).'/exemplo_utils.php');
+
 $curso = $argv[1];
 
-$resultado = shell_exec("pega_num_paginas.php $curso");
+touch("./tmp/{$curso}");
 
-var_dump($resultado);
+$qtd_paginas = shell_exec("pega_num_paginas.php $curso");
 
-/*
-$total_paginas = 0;
-$max = 5;
-
-while(1)
+for($pg = 1; $pg <= $qtd_paginas; $pg++)
 {
-    
+    echo "criando o arquivo para a pagina {$pg}\n";
+    touch("./tmp/{$curso}_pg_{$pg}");
 }
 
-*/
+unlink("./tmp/{$curso}");
+
