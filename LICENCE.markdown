@@ -1,20 +1,22 @@
+# Licença de uso e distribuição #
+
 Copyright (c) 2009, Tarcisio Ferreira Sassara
 Todos os direitos reservados.
 
 A redistribuição e uso em forma de código fonte ou binário, com ou sem
 modificações são permitos desde que as seguintes condições sejam atendidas:
 
-* Redistribuições do código fonte deste projeto deve manter o aviso de
-  copyright acima, esta lista de condições e o texto de exclusão de 
-  responsabilidade presente no final deste documento.
+*   Redistribuições do código fonte deste projeto deve manter o aviso de
+    copyright acima, esta lista de condições e o texto de exclusão de 
+    responsabilidade presente no final deste documento.
 
-* Redistribuições binárias deve reproduzir o aviso de copyright acima, esta
-  lista de condições, o texto de exclusão de responsabilidade presente no final
-  deste documento e(ou) outros materiais fornecidos com esta distribuição.
+*   Redistribuições binárias deve reproduzir o aviso de copyright acima, esta
+    lista de condições, o texto de exclusão de responsabilidade presente no final
+    deste documento e(ou) outros materiais fornecidos com esta distribuição.
 
-* o nome de Tarcisio Ferreira Sassara ou seus colaboradores não devem ser
-  utilizados para endossar ou promover produtos derivados deste software sem
-  permissão prévia por escrito.
+*   o nome de Tarcisio Ferreira Sassara ou seus colaboradores não devem ser
+    utilizados para endossar ou promover produtos derivados deste software sem
+    permissão prévia por escrito.
 
 ESTE SOFTWARE É FORNECIDO PELO SEU DETENTOR DE DIREITOS AUTORAIS E COLABORADORES
 NA FORMA EM QUE SE ENCONTRA E QUAISQUER GARANTIAS, INCLUINDO, MAS NÃO SE
