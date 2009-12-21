@@ -37,9 +37,9 @@ __Simplifica o desenvolvimento__: Escrever um código que executa apenas uma tar
 é muito mais simples. É menos problemas para se pensar. Basta saber o
 que vai entrar e em como reproduzir a saída esperada.
 
-__Possibilita trabalhar de forma paralelizada__:Escrevendo um script único
+__Trabalhar de forma paralelizada__:Escrevendo um script único
 impossibilita usar o máximo da capacidade de processamento de um computador moderno
-com múltiplos núcleos. Sim, é possível usar este potêncial em outras linguagens, 
+com múltiplos núcleos. Sim, é possível usar este potencial em outras linguagens, 
 mas no PHP não é possível. Então, criei as tarefas separadamente e assim posso
 chamar a quantidade de cada um no momento que eu quiser. Quando pedimos uma página,
 esta retorna vários links. Ao invés de processar cada um após o outro, podemos
@@ -99,7 +99,7 @@ chamado dentro de um laço.
     
     # Ex 2:
     # pega a primeira página do curso de matemática e salva em um arquivo
-    # note o redirecionamento da saida para o arquivo com o ">"
+    # note o redirecionamento da saída para o arquivo com o ">"
     
     pega_pagina.php matematica 1 > matematica_pg1.html
     
