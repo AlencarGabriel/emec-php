@@ -4,6 +4,17 @@ Uma série de pequenos scripts em PHP para conectar no site do
 [e-mec](http://emec.mec.gov.br/ "site do e-mec") e capturar
 todas as instituições que oferecem o curso pesquisado.
 
+## Licença ##
+Este projeto está licenciado com as mesmas condições de uma licença no estilo BSD.
+O arquivo contendo a licença está no mesmo diretório deste arquivo com o nome
+de "LICENCE.markdown".
+
+Resumindo: Você pode pegar, usar e fazer o que quiser mas não pode me culpar se
+algo der errado. A única coisa que você deve fazer para estar dentro da lei é 
+dar os devidos créditos para o criador deste projeto.
+
+De toda maneira, o que vale é o que está escrito na licença.
+
 ## Introdução ##
 
 Para entender como estes scripts funcionam é importante saber como o site emec
@@ -153,7 +164,7 @@ Com o uso dos scripts anteriores é possível escrever em um arquivo único tabu
     # pega a primeira instituição do curso de matemática e salva em um arquivo
     # note que foi quebrado a linha em duas com a barra "\"
     
-    pega_instituicao.php `./pega_pagina.php MATEMATICA 1 \
+    pega_instituicao.php `./pega_pagina.php matematica 1 \
     | pega_urls.php | head -1` | extrai_instituicao.php
 
 
