@@ -2,8 +2,11 @@
 # Makefile
 #
 
-PREFIX=/usr/local/emec_crawler
+PREFIX=/usr/local/emec-php
 SRC_DIR=./
 
-all:
+install:
 	cp -r $(SRC_DIR) $(PREFIX)
+
+remove:
+	rm -rf $(PREFIX)
