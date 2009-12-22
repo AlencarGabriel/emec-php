@@ -85,18 +85,22 @@ __Simplifica o desenvolvimento__: Escrever um código que executa apenas uma tar
 é muito mais simples. É menos problemas para se pensar. Basta saber o
 que vai entrar e em como reproduzir a saída esperada.
 
-__Trabalhar de forma paralelizada__:Escrevendo um script único
-impossibilita usar o máximo da capacidade de processamento de um computador moderno
-com múltiplos núcleos. Sim, é possível usar este potencial em outras linguagens, 
-mas no PHP não é possível. Então, criei as tarefas separadamente e assim posso
-chamar a quantidade de cada um no momento que eu quiser. Quando pedimos uma página,
+__Trabalhar de forma paralelizada__:Escrevendo um script único processo e em uma
+única thread impossibilita usar o máximo da capacidade de processamento de um
+computador moderno com múltiplos núcleos. No PHP não é possível trabalhar com
+threads, então, criei as tarefas separadamente e assim posso chamar a quantidade
+de cada uma no momento que eu quiser. Quando pedimos uma página,
 esta retorna vários links. Ao invés de processar cada um após o outro, podemos
-processar até todos de uma vez.
+processar até todos de uma vez. Sendo recomendado ter a quantidade de processos
+rodando igual ao número de núcleos do(s) processador(es)
 
 ### Pseudo-código ###
 
 Uso simplificado dos scripts:
 
+    #
+    # Uso dos scripts de forma sequencial
+    #
     cursos = ["engenharia", "matemática"]
     FOREACH cursos AS curso
         total_paginas = pega_num_paginas(curso)
@@ -137,8 +141,8 @@ Passando o curso desejado e a página, este script se conectará no site do
 emec e pegará uma página html contendo os links das instituições.
 São 15 links por página.
 
-Como é preciso informar qual página deve ser pegada, este script é melhor
-chamado dentro de um laço.
+Como é preciso informar qual página deve ser chamada, este script é melhor
+usado dentro de um laço.
 
     # Ex 1:
     # pega a primeira página do curso de enfermagem
