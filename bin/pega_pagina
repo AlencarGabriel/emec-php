@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 
-require_once(dirname(__FILE__).'/utils.php');
+require_once(dirname(__FILE__).'/../lib/emec_header_utils.php');
 
 if ( $argc < 3 || in_array($argv[1], array('--help', '-help', '-h', '-?'))) {
     help();
