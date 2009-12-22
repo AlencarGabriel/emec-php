@@ -12,13 +12,19 @@ $conteudo = file_get_contents('php://stdin');
 
 $dados = array();
 
-$er = '/<td class="subline2" colspan="3">([^#]*?)<\/td>/S';
+$er = '/<td class="subline2?" colspan="3">([^#]*?)<\/td>/S';
 preg_match_all($er, $conteudo, $matches);
 
 $p1                          = trim($matches[1][0]);
 $dados['natureza_juridica']  = trim($matches[1][1]);
 $dados['email']              = trim($matches[1][2]);
-$dados['educacao_distancia'] = trim($matches[1][3]);
+if(isset($matches[1][3]))
+{
+    $dados['educacao_distancia'] = 'sim';
+} else
+{
+    $dados['educacao_distancia'] = 'não';
+}
 
 // p1
 $er = '/\((.*?)\)(.*?)\((.*?)\)/';
@@ -27,7 +33,7 @@ $dados['cnpj']        = trim($matches[1][0]);
 $dados['mantenedora'] = trim($matches[2][0]);
 $dados['codigo']      = trim($matches[3][0]);
 
-$er = '/<td class="subline2" colspan="5">([^#]*?)<\/td>/S';
+$er = '/<td class="subline2?" colspan="5">([^#]*?)<\/td>/S';
 preg_match_all($er, $conteudo, $matches);
 $p1 = trim($matches[1][0]);
 
@@ -36,7 +42,7 @@ preg_match_all($er, $p1, $matches);
 $dados['nome_ies']   = trim($matches[1][0]);
 $dados['codigo_ies'] = trim($matches[2][0]);
 
-$er = '/<td class="subline2">([^#]*?)<\/td>/S';
+$er = '/<td class="subline2?">([^#]*?)<\/td>/S';
 preg_match_all($er, $conteudo, $matches);
 
 $dados['endereco']              = trim($matches[1][0]);
@@ -55,7 +61,7 @@ $matches = split('/', $dados['endereco_cidade_uf']);
 $dados['endereco_municipio'] = trim($matches[0]);
 $dados['endereco_uf']        = trim($matches[1]);
 
-$er = '/<td class="subline2" colspan="4">([^#]*?)<\/td>/S';
+$er = '/<td class="subline2?" colspan="4">([^#]*?)<\/td>/S';
 preg_match_all($er, $conteudo, $matches);
 $dados['endereco_numero'] = trim($matches[1][0]);
 $dados['fax']             = trim($matches[1][1]);
