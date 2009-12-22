@@ -34,11 +34,12 @@ efetuar uma busca completa.
 
 Ao pressionar o botão "consultar", o site carrega a lista de instituições
 que queríamos. Como são muitas instituições, o resultado é mostrado dividido 
-em páginas.
+em páginas. Estas páginas são muito importantes.
+Cada entrada de uma página contém o nome da instituição e um link para a página
+dos detalhes da instituição como o endereço por exemplo.
 
-Cada entrada de uma página contém o nome da instituição e o mais importante: Um
-link para a página contendo os detalhes da instituição como o endereço por exemplo.
-E estes são os dados que podem ser capturados usando os scripts que aqui estão.
+É possível recuperar estas informações detalhadas sobre as instituições de
+ensino que lecionam determinado curso com os scripts que você encontra aqui.
 
 ## Instalação ##
 Baixe a última versão:
@@ -57,7 +58,7 @@ editando o arquivo Makefile:
     # altere a variável prefix com o caminho desejado
     PREFIX=/usr/local/emec-php
 
-Você pode chamar cada script chamando o caminho completo para o arquivo ou pode
+Você pode chamar cada script com o caminho completo para o arquivo ou pode
 adicionar o diretório _PREFIX_/bin no PATH do sistema.
 
 __Veja um exemplo completo:__
